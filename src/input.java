@@ -18,5 +18,6 @@ public class input {
 
         System.out.println("Your input is " + userInput + " confirm? (Y/N)");
         char userConfirmation = scan.next().charAt(0);
+
     }
 }
