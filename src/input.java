@@ -3,21 +3,19 @@ import java.util.*;
 public class input {
     public static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
+        int totalValues = 0;
+        String userNumber = "";
 
-        System.out.println("Provide a letter: ");
-        String userInput = scan.nextLine();
-        while (!userInput.matches("[a-zA-Z]{1}")) {
-            System.out.println("Please enter a single letter only.");
-            userInput = scan.nextLine();
+        while (userNumber.equals("")) {
+            System.out.println("Provide a number from 1-9: ");
+            userNumber = scan.nextLine();
+            if (!userNumber.matches("\\d")) {
+                System.out.println("Please input a number from 1-9");
+                userNumber = "";
+            }
         }
-        char[] confirm = new char[4];
-        confirm[0] = 'Y';
-        confirm[1] = 'N';
-        confirm[2] = 'y';
-        confirm[3] = 'n';
 
-        System.out.println("Your input is " + userInput + " confirm? (Y/N)");
-        char userConfirmation = scan.next().charAt(0);
+        System.out.println("Your input is " + userNumber);
 
     }
 }

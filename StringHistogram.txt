@@ -1,0 +1,2 @@
+This program asks the user for 5 integer inputs, and then distributes the inputs onto a
+command line based histogram.
